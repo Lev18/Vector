@@ -22,9 +22,9 @@ public:
   Vector operator=(Vector&& oth);
   ~Vector();
 
-  void push_back (int elem);
+  void push_back(int elem);
   void pop_back();
-  void print ();
+  void print();
   int at(int placement);
   int operator[](int index);
   void insert(int placement, int elem);
