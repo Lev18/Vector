@@ -58,7 +58,7 @@ void Vector::push_back (int elem) {
             tmp[i] = arr[i];
         }
         capacity *= 2;
-        delete [] arr;
+        delete[] arr;
         arr = tmp;
         tmp = nullptr;
     }
@@ -112,7 +112,7 @@ void Vector::insert(int placement, int elem) {
     }
    ++capacity;
    ++size;
-    delete [] arr;
+    delete[] arr;
     arr = tmp;
 }
 
@@ -123,7 +123,7 @@ void Vector::pop_front() {
   for(auto i = 0; i < size -1; ++i) {
     *tmp++ = *ptr++;
   }
-  delete [] arr;
+  delete[] arr;
   arr = ptr1;
   --size;
 }
