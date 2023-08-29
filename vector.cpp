@@ -44,7 +44,7 @@ Vector Vector::operator=(const Vector& src) {
         arr = new int[capacity]; // allocate new memory for the new array
 
         // copying elements from source object's array
-        for(int in = 0; in < capacity; ++in) {
+        for (int in = 0; in < capacity; ++in) {
             arr[in] = src.arr[in];
         }
     }
@@ -120,7 +120,7 @@ void Vector::pop_front() {
   int* tmp = new int [capacity - 1];
   int* ptr = arr + 1;
   int* ptr1 = tmp;
-  for(auto i = 0; i < size -1; ++i) {
+  for (auto i = 0; i < size -1; ++i) {
     *tmp++ = *ptr++;
   }
   delete[] arr;
