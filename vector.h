@@ -13,14 +13,20 @@ class  Vector {
 
 public:
   Vector(): size(0), capacity(1), arr(nullptr) {
-    arr = new int [capacity];
+    arr = new int[capacity];
   }
+
+  Vector(const Vector& src);
+  Vector operator=(const Vector& oth);
+  Vector(Vector&& oth);
+  Vector operator=(Vector&& oth);
+  ~Vector();
 
   void push_back (int elem);
   void pop_back();
   void print ();
   int at(int placement);
-  int operator[] (int index);
+  int operator[](int index);
   void insert(int placement, int elem);
   void pop_front();
   void push_front(int elem);
