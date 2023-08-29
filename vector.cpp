@@ -32,11 +32,17 @@ void Vector::print () {
 }
 
 int Vector::at (int placement) {
-    if (size < placement) {
+    if (size <= placement) {
         throw std::out_of_range("index is out of range");
     }
+    return arr[placement];
+}
 
-        return arr[placement];
+int Vector::operator[] (int index) {
+     if (size <= index) {
+        throw std::out_of_range("index is out of range");
+    }
+    return arr[index]; 
 }
 
 void Vector::insert(int placement, int elem) {
