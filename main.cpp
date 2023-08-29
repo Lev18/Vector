@@ -12,5 +12,6 @@ int main() {
     obj1.push_front(7);
     obj1.pop_front();
     obj1.print();
+  
     std::cout << obj1[3] << std::endl;
 }
